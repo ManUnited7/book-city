@@ -1,0 +1,168 @@
+@import './common.scss';
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    height: pxTorem(45px);
+    display: flex;
+    background: #efeff0;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 99;
+    a {
+        width: pxTorem(40px);
+        height: 100%;
+        &:before {
+            content: '';
+            display: block;
+            margin: 25px 0 0 16px;
+            width: pxTorem(13px);
+            height: pxTorem(19px);
+            background: url("http://dushu.xiaomi.com/x0D0GrWs.png") no-repeat;
+            background-size: pxTorem(13px) pxTorem(19px);
+        }
+    }
+    .search-input {
+        flex: 1;
+        position: relative;
+        padding-left: pxTorem(45px);
+        padding: pxTorem(4px) pxTorem(14px) pxTorem(4px) pxTorem(4px);
+        form {
+            background: #Fff;
+            width: 100%;
+            height: 100%;
+            padding-left: pxTorem(40px);
+            display: flex;
+            .search-input__mi {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: pxTorem(40px);
+                height: pxTorem(40px);
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                background: url("http://image.read.duokan.com/mfsv2/download/s010/p01TjruXIhgt/PP13pEqhpChuay.png") no-repeat center;
+                background-size: pxTorem(20px) pxTorem(20px);
+            }
+            input {
+                flex: 1;
+            }
+            #Tag__1 {
+                display: block;
+                line-height: pxTorem(40px);
+                position: absolute;
+                right: pxTorem(14px);
+                top: pxTorem(4px);
+                width: pxTorem(40px);
+                height: pxTorem(40px);
+                border-left: 1px solid #ddd;
+                text-align: center;
+                font-size: pxTorem(12px);
+                color: #666;
+            }
+        }
+    }
+}
+
+.search-cont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: pxTorem(10px);
+    padding-top: pxTorem(45px);
+    a {
+        flex-shrink: 0;
+        padding: pxTorem(5px) pxTorem(10px);
+        font-size: pxTorem(14px);
+        border-radius: pxTorem(4px);
+        margin: pxTorem(3px) pxTorem(20px);
+        color: #766d5d;
+        border: 1px solid #d3d3d3;
+        &:nth-of-type(3n+1) {
+            background-color: #fbebe8;
+        }
+        &:nth-of-type(3n+2) {
+            background-color: #fcedda;
+        }
+        &:nth-of-type(3n+3) {
+            background-color: #e8f9db;
+        }
+    }
+}
+
+.dl-list {
+    padding: pxTorem(15px) pxTorem(10px);
+    width: 100%;
+    height: auto;
+    padding-bottom: pxTorem(15px);
+    border-bottom: 1px solid #ccc;
+    dl {
+        width: 100%;
+        height: auto;
+        display: flex;
+        dt {
+            width: pxTorem(96px);
+            height: auto;
+            position: relative;
+            img {
+                width: pxTorem(96px);
+                height: auto;
+            }
+            b {
+                background: rgba(237, 83, 15, 0.9);
+                color: #fff;
+                position: absolute;
+                padding: 3px 9px;
+                top: 0;
+                left: 0;
+            }
+            em {
+                color: #Fff;
+                position: absolute;
+                bottom: pxTorem(5px);
+                left: pxTorem(3px);
+                width: pxTorem(30px);
+                background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            }
+        }
+        dd {
+            margin-left: pxTorem(10px);
+            h1 {
+                color: rgba(0, 0, 0, 0.9);
+                height: pxTorem(26px);
+                line-height: pxTorem(26px);
+                font-size: pxTorem(16px);
+            }
+            p {
+                width: 100%;
+                height: pxTorem(22px);
+                line-height: pxTorem(22px);
+                margin-top: pxTorem(4px);
+                span {
+                    color: #53ac7d;
+                    border-radius: 3px;
+                    border: 1px solid #53ac7d;
+                    margin: -3px 7px 0 0;
+                    padding: 3px 6px 2px;
+                }
+            }
+        }
+    }
+}

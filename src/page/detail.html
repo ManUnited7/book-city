@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" href="../scss/detail.css">
+    <script src='../js/lib/require.js'></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['detail']);
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="wrap-cont">
+
+    </div>
+
+
+    <script id='hand' type='text/x-handlebars-template'>
+        <div class="top">
+            <p>
+                <a href="javascript:history.back()" class="top__back"></a>
+                <span>{{title}}</span>
+            </p>
+            <a id="Tag__121" class="header-home1"></a>
+        </div>
+        <div class="cont">
+            <dl>
+                <dt>
+                    <img src="{{cover}}" alt="">
+                </dt>
+                <dd>
+                    <h1>{{title}}</h1>
+                    <span>{{authors}}</span>
+                    <h3><em></em><span>{{score_count}}个评价</span></h3>
+                    <p>价格：{{price}}书币/千字</p>
+                    <h2>字数：{{#wordcount word_count}}{{/wordcount}}万字 <b>{{#finish finish}}{{/finish}}</b></h2>
+                </dd>
+            </dl>
+            <div class="button">
+                <a href="text.html?id={{source_id}}&chaptersum={{chapter_count}}"><button>开始阅读</button></a>
+                <a href="#"> <button>下载</button></a>
+            </div>
+            <div class="text">
+                <p>{{content}}</p>
+            </div>
+            <div class="time">
+                <a href="/page/menu.html?id={{source_id}}&active=76">
+                    <p>最新：{{latest}} 更新于{{#updataTime updated}}{{/updataTime}} </p>
+                </a>
+            </div>
+            <div class="text1">
+            </div>
+            <div class="cont1">
+                <h1>类别标签</h1>
+                <p>
+                    {{#each tags}}
+                    <span>{{this}}</span> {{/each}}
+                </p>
+            </div>
+            <div class="cont2">
+            </div>
+            <div class="text1">
+            </div>
+            <div class="cont3">
+                <p>图书信息</p>
+                <span>版权：{{rights}}</span>
+            </div>
+        </div>
+
+    </script>
+    <script id='handle' type='text/x-handlebars-template'>
+        <p>作者其他图书</p>
+        {{#each this}}
+        <dl>
+            <dt><img src="{{cover}}"></dt>
+            <dd><span>{{title}}</span></dd>
+        </dl>
+        {{/each}}
+    </script>
+</body>
+
+</html>

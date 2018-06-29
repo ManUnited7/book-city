@@ -1,0 +1,236 @@
+@import './common.scss';
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    height: pxTorem(45px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #efeff0;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 99;
+    p {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: pxTorem(14px);
+        }
+    }
+    .top__back {
+        width: pxTorem(40px);
+        height: 100%;
+        &:before {
+            content: '';
+            display: block;
+            margin-left: 16px;
+            width: pxTorem(13px);
+            height: pxTorem(19px);
+            background: url("http://dushu.xiaomi.com/x0D0GrWs.png") no-repeat;
+            background-size: pxTorem(13px) pxTorem(19px);
+        }
+    }
+    .header-home1 {
+        display: block;
+        width: pxTorem(19px);
+        height: pxTorem(19px);
+        margin-right: pxTorem(12px);
+        background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01eZH42sBV7/QTS90E2ZVritaa.png) no-repeat center;
+        background-size: pxTorem(19px) pxTorem(19px);
+    }
+}
+
+.cont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: pxTorem(45px);
+    >dl {
+        display: flex;
+        width: 100%;
+        height: auto;
+        dt {
+            width: pxTorem(120px);
+            height: pxTorem(180px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: pxTorem(90px);
+                height: auto;
+            }
+        }
+        dd {
+            padding-top: pxTorem(25px);
+            h1 {
+                line-height: 2;
+                font-size: pxTorem(18px);
+            }
+            span {
+                color: #4b99a7;
+            }
+            h3 {
+                line-height: 2;
+                span {
+                    color: #8d8d8d;
+                }
+                em {
+                    font-style: normal;
+                    display: inline-block;
+                    width: pxTorem(80px);
+                    height: pxTorem(14px);
+                    background: url('../img/8lqyfBwW.png') no-repeat;
+                    background-size: cover;
+                    background-position: 0 -128px;
+                }
+            }
+            p {
+                line-height: 2;
+                color: #6e6e6e;
+            }
+            h2 {
+                color: #6e6e6e;
+                b {
+                    display: inline-block;
+                    color: #63bd6e;
+                    border: 1px solid #63bd6e;
+                    text-align: center;
+                    border-radius: 4px;
+                    padding: 3px 3px;
+                }
+            }
+        }
+    }
+    .button {
+        width: 100%;
+        height: pxTorem(50px);
+        display: flex;
+        padding: 0 pxTorem(5px);
+        a {
+            flex: 1;
+            padding: pxTorem(5px);
+            &:nth-of-type(1) button {
+                background: #f35d02;
+                color: #fff;
+            }
+            button {
+                width: 100%;
+                border: 0;
+                height: 100%;
+                border-radius: 10px;
+                font-size: pxTorem(14px);
+                color: #737373;
+            }
+        }
+    }
+    .text {
+        padding: pxTorem(14px);
+        border-bottom: 1px solid #ccc;
+        p {
+            color: #585858;
+            font-size: pxTorem(14px);
+            line-height: 1.5;
+            display: box;
+            box-orient: vertical;
+            line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6;
+            word-break: break-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .time {
+        width: 100%;
+        height: pxTorem(35px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: #000;
+        }
+    }
+    .text1 {
+        width: 100%;
+        height: pxTorem(10px);
+        background: #efeff0;
+    }
+    .cont1 {
+        padding: pxTorem(13px);
+        h1 {
+            color: #8d8d8d;
+            font-size: pxTorem(16px);
+            margin-bottom: pxTorem(10px);
+        }
+        p {
+            width: 100%;
+            height: pxTorem(30px);
+            display: flex;
+            span {
+                background: #e8f9db;
+                color: #766d5d;
+                padding: pxTorem(10px) pxTorem(10px);
+                margin: 0 pxTorem(5px);
+                border: 1px solid #d3d3d3;
+                text-align: center;
+                border-radius: pxTorem(5px);
+            }
+        }
+    }
+    .cont2 {
+        padding: pxTorem(13px) pxTorem(13px) pxTorem(25px) pxTorem(13px);
+        p {
+            color: #8d8d8d;
+            margin-bottom: pxTorem(10px);
+            font-size: pxTorem(16px);
+        }
+        dl {
+            dt {
+                width: pxTorem(90px);
+                height: auto;
+                img {
+                    width: pxTorem(90px);
+                    height: auto;
+                }
+            }
+            dd {
+                span {
+                    color: #8d8d8d;
+                }
+            }
+        }
+    }
+    .cont3 {
+        width: 100%;
+        height: pxTorem(60px);
+        padding: pxTorem(15px);
+        p {
+            color: #8d8d8d;
+            font-size: pxTorem(14px);
+        }
+        span {
+            color: #8d8d8d;
+            line-height: 2.5;
+        }
+    }
+}

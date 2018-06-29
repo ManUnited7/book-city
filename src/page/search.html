@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索页</title>
+    <link rel="stylesheet" href="../scss/search.css">
+    <script src='../js/lib/require.js'></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['search'])
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <a href="javascript:history.back()" class="top__back"></a>
+            <div id="search-input" class="search-input">
+                <form>
+                    <b class="search-input__mi"></b>
+                    <input type="text" value="" placeholder="输入书名/作者/关键字">
+                    <div class="search-input__btn" id="Tag__1">搜索</div>
+                </form>
+            </div>
+        </div>
+        <div class="search-cont">
+
+        </div>
+    </div>
+
+    <script id='handle' type='text/x-handlebars-template'>
+        {{#each ads}}
+        <a href="javascript:;">{{ad_name}}</a> {{/each}}
+    </script>
+    <script id='handless' type='text/x-handlebars-template'>
+        <div class="text">{{this}}</div>
+    </script>
+
+    <script id='handles' type='text/x-handlebars-template'>
+        <div class="dl-list">
+            {{#each cont}}
+            <dl>
+                <dt><img src="{{cover}}" alt=""></dt>
+                <dd>
+                    <p>{{title}}</p>
+                    <span>{{intro}}</span>
+                    <h1>{{role}}</h1>
+                </dd>
+            </dl>
+            {{/each}}
+        </div>
+    </script>
+</body>
+
+</html>

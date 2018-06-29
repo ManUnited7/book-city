@@ -1,0 +1,90 @@
+@import './common.scss';
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    height: pxTorem(45px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #efeff0;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    z-index: 99;
+    p {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: pxTorem(14px);
+        }
+    }
+    .top__back {
+        width: pxTorem(40px);
+        height: 100%;
+        &:before {
+            content: '';
+            display: block;
+            margin-left: 16px;
+            width: pxTorem(13px);
+            height: pxTorem(19px);
+            background: url("http://dushu.xiaomi.com/x0D0GrWs.png") no-repeat;
+            background-size: pxTorem(13px) pxTorem(19px);
+        }
+    }
+    .header-home1 {
+        display: block;
+        width: pxTorem(19px);
+        height: pxTorem(19px);
+        margin-right: pxTorem(12px);
+        background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01eZH42sBV7/QTS90E2ZVritaa.png) no-repeat center;
+        background-size: pxTorem(19px) pxTorem(19px);
+    }
+}
+
+section {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: pxTorem(45px);
+    .list {
+        width: 100%;
+        height: auto;
+        li {
+            height: pxTorem(40px);
+            width: 100%;
+            padding: 0 pxTorem(10px);
+            border-bottom: 1px solid #EEE;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &.active {
+                p {
+                    color: #F35D02;
+                }
+            }
+            p {
+                font-size: pxTorem(14px);
+                color: #555;
+            }
+            span {
+                font-size: pxTorem(14px);
+                color: #6cb378;
+            }
+        }
+    }
+}

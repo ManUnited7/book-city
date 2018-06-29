@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>读书页</title>
+    <link rel="stylesheet" href="../scss/text.css">
+    <script src='../js/lib/require.js'></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['text1'])
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="cont">
+            <div class="top">
+                <a class="reader__back" id="Tag__90" href="javascript:history.back()">
+                    <span>返回</span>
+                </a>
+                <a class="reader__more" vp-click="$root.toggle()" vp-class="{'reader__more_on' : $root.on}" id="Tag__2">
+                    <pseudo:before>
+                        <pseudo:before>
+                </a>
+            </div>
+            <section class="cont1">
+
+            </section>
+            <footer>
+                <div class="config-box" style="display:none;">
+                    <div class="character">
+                        <h2>字体</h2>
+                        <button>大</button>
+                        <button>小</button>
+                    </div>
+                    <div class="color-box">
+                        <h2>背景</h2>
+                        <div class="bgcolor-cont">
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot1">
+                    <span class="prev-btn">上一章</span>
+                    <span><em class="cur">1</em>/<b class="sum"></b></span>
+                    <span class="next-btn">下一章</span>
+                </div>
+                <div class="foot2">
+                    <a class="menu-btn">
+                        <p></p>
+                        <span>目录</span>
+                    </a>
+                    <a href="#" class="typeface">
+                        <p></p>
+                        <span>字体</span>
+                    </a>
+                    <a href="#">
+                        <p></p>
+                        <span>夜间</span>
+                    </a>
+                    <a href="#">
+                        <p></p>
+                        <span>下载</span>
+                    </a>
+                </div>
+            </footer>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+    <script id='hand' type='text/x-handlebars-template'>
+        <h2>{{t}}</h2>
+        {{#each p}}
+        <p>{{this}}</p>
+        {{/each}}
+    </script>
+</body>
+
+</html>
