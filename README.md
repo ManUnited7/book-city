@@ -44,10 +44,9 @@ gulp + require + handlebars + ajax + sass + flex
     |   |--index.html
 ```
 >项目截图
-```
+
 ![image](./pic/1.png)
 ![image](./pic/2.png)
 ![image](./pic/3.png)
 ![image](./pic/4.png)
 ![image](./pic/5.png)
-```
